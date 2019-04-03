@@ -19,9 +19,26 @@ int tailKosong(){
 	else
 		return 0;
 }
+void buatNodeDepan(int dataBaru){
+	nodeLinkedList *nodeBaru = new nodeLinkedList;
+	nodeBaru->data = dataBaru;
+	nodeBaru->next = nodeBaru;
+	if(tailKosong()==1){
+		head = nodeBaru;
+		tail = nodeBaru;
+		head->next = head;
+		tail->next = tail;
+	}
+	else{
+		nodeBaru->next = head;
+		head = nodeBaru;
+		tail->next = head;
+	}
+	cout << "Data Baru Masuk Dari Depan";
+}
 int main(){
 	return 0;
-//oke
+
 	
-	//bisa
+	
 }
