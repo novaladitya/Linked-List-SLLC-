@@ -154,6 +154,13 @@ void tampilNode(){
 		cout << "Linked List Masih Kosong";
 }
 int main(){
+		buatNodeBelakang(1);
+	buatNodeBelakang(2);
+	buatNodeBelakang(3);
+	buatNodeBelakang(4);
+	buatNodeBelakang(5);
+	tambahNode(10,3);
+	tampilNode();
 	return 0;
 
 	
