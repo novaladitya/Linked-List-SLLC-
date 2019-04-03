@@ -132,6 +132,16 @@ void tambahNode(int dataBaru, int dataSebelum){
 		}
 	}
 }
+void hapusNode(int data){
+	nodeLinkedList *hapus = new nodeLinkedList;
+	nodeLinkedList *bantu = new nodeLinkedList;
+	hapus = head;
+	for(int i=1; i<data; i++){
+		bantu = hapus;
+		hapus = hapus->next;
+	}
+	bantu->next = hapus->next;
+}
 int main(){
 	return 0;
 
