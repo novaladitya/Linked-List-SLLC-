@@ -75,6 +75,32 @@ void hapusNodeDepan(){
 		else
 			cout << "Linked List Masih Kosong";
 }
+
+void hapusNodeBelakang(){
+	nodeLinkedList *hapus, *bantu;
+	if(tailKosong()==0){
+		int dta;
+		if(head==tail){
+			dta = tail->data;
+			head = NULL;
+			tail = NULL;
+		}
+		else{
+			bantu = head;
+			while(bantu->next != tail){
+				bantu = bantu->next;
+			}
+			hapus = tail;
+			tail = bantu;
+			dta = hapus->data;
+			tail->next = head;
+			delete hapus;
+		}
+		cout << "Node Belakang Terhapus";
+		}
+		else
+			cout << "Linked List Masih Kosong";
+}
 int main(){
 	return 0;
 
