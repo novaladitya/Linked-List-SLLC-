@@ -54,6 +54,27 @@ void buatNodeBelakang(int dataBaru){
 	}
 	cout << "Data Baru Masuk Dari Belakang";
 }
+void hapusNodeDepan(){
+	nodeLinkedList *hapus;
+	if(tailKosong()==0){
+		int dta;
+		hapus = head;
+		dta = head->data;
+		if(head != tail){
+			hapus = head;
+			head = head->next;
+			tail->next = head;
+			delete hapus;
+		}
+		else{
+			head = NULL;
+			tail = NULL;
+		}
+		cout << "Node Depan Terhapus";
+		}
+		else
+			cout << "Linked List Masih Kosong";
+}
 int main(){
 	return 0;
 
