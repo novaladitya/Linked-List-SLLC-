@@ -36,6 +36,24 @@ void buatNodeDepan(int dataBaru){
 	}
 	cout << "Data Baru Masuk Dari Depan";
 }
+
+void buatNodeBelakang(int dataBaru){
+	nodeLinkedList *nodeBaru = new nodeLinkedList;
+	nodeBaru->data = dataBaru;
+	nodeBaru->next = nodeBaru;
+	if(tailKosong()==1){
+		head = nodeBaru;
+		tail = nodeBaru;
+		head->next = head;
+		tail->next = tail;
+	}
+	else{
+		tail->next = nodeBaru;
+		tail = nodeBaru;
+		tail->next = head;
+	}
+	cout << "Data Baru Masuk Dari Belakang";
+}
 int main(){
 	return 0;
 
