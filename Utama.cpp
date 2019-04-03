@@ -41,7 +41,7 @@ void buatNodeDepan(int dataBaru){
 		head = nodeBaru;
 		tail->next = head;
 	}
-	cout << "Data Baru Masuk Dari Depan/n";
+	cout << "Data Baru Masuk Dari Depan\n";
 }
 
 void buatNodeBelakang(int dataBaru){
@@ -59,7 +59,7 @@ void buatNodeBelakang(int dataBaru){
 		tail = nodeBaru;
 		tail->next = head;
 	}
-	cout << "Data Baru Masuk Dari Belakang/n";
+	cout << "Data Baru Masuk Dari Belakang\n";
 }
 void hapusNodeDepan(){
 	nodeLinkedList *hapus;
@@ -77,10 +77,10 @@ void hapusNodeDepan(){
 			head = NULL;
 			tail = NULL;
 		}
-		cout << "Node Depan Terhapus/n";
+		cout << "Node Depan Terhapus\n";
 		}
 		else
-			cout << "Linked List Masih Kosong/n";
+			cout << "Linked List Masih Kosong\n";
 }
 
 void hapusNodeBelakang(){
@@ -103,10 +103,10 @@ void hapusNodeBelakang(){
 			tail->next = head;
 			delete hapus;
 		}
-		cout << "Node Belakang Terhapus/n";
+		cout << "Node Belakang Terhapus\n";
 		}
 		else
-			cout << "Linked List Masih Kosong/n";
+			cout << "Linked List Masih Kosong\n";
 }
 void tambahNode(int dataBaru, int dataSebelum){
 	nodeLinkedList *nodeBaru, *bantu, *batas;
@@ -119,7 +119,7 @@ void tambahNode(int dataBaru, int dataSebelum){
 		nodeBaru->next = head;
 		head = nodeBaru;
 		tail->next = head;
-		cout << "Data Baru Masuk/n";
+		cout << "Data Baru Masuk\n";
 	}
 	else{
 		while((bantu->next)->data!=dataSebelum){
@@ -130,12 +130,12 @@ void tambahNode(int dataBaru, int dataSebelum){
 			}
 		}
 		if(cek==0)
-			cout << "Angka tidak ditemukan dalam linked list/n";
+			cout << "Angka tidak ditemukan dalam linked list\n";
 		else{
 			batas = bantu->next;
 			bantu->next = nodeBaru;
 			nodeBaru->next = batas;
-			cout << "Data Baru Masuk/n";
+			cout << "Data Baru Masuk\n";
 		}
 	}
 }
@@ -158,7 +158,7 @@ void tampilNode(){
 		}while(dta != tail->next);
 	}
 	else
-		cout << "Linked List Masih Kosong/n";
+		cout << "Linked List Masih Kosong\n";
 }
 int main(){
 		buatNodeBelakang(1);
