@@ -101,6 +101,37 @@ void hapusNodeBelakang(){
 		else
 			cout << "Linked List Masih Kosong";
 }
+void tambahNode(int dataBaru, int dataSebelum){
+	nodeLinkedList *nodeBaru, *bantu, *batas;
+	int cek = 1;
+	nodeBaru = new nodeLinkedList;
+	nodeBaru->data = dataBaru;
+	nodeBaru->next = nodeBaru;
+	bantu = head;
+	if(head->data==dataSebelum){
+		nodeBaru->next = head;
+		head = nodeBaru;
+		tail->next = head;
+		cout << "Data Baru Masuk";
+	}
+	else{
+		while((bantu->next)->data!=dataSebelum){
+			bantu = bantu->next;
+			if(bantu==tail){
+				cek = 0;
+				break;
+			}
+		}
+		if(cek==0)
+			cout << "Angka tidak ditemukan dalam linked list";
+		else{
+			batas = bantu->next;
+			bantu->next = nodeBaru;
+			nodeBaru->next = batas;
+			cout << "Data Baru Masuk";
+		}
+	}
+}
 int main(){
 	return 0;
 
