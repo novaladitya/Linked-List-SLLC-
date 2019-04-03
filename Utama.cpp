@@ -142,6 +142,17 @@ void hapusNode(int data){
 	}
 	bantu->next = hapus->next;
 }
+void tampilNode(){
+	nodeLinkedList *dta = head;
+	if(tailKosong()==0){
+		do{
+			cout << dta->data << " ";
+			dta = dta->next;
+		}while(dta != tail->next);
+	}
+	else
+		cout << "Linked List Masih Kosong";
+}
 int main(){
 	return 0;
 
